@@ -209,7 +209,7 @@ public class Task{
 				for(int j=i+1;j<lines.size();j++){
 					int index2=getIdexoFString(lines.get(j));
 					if(index1>=index2){
-                        index1=index2;
+                       			 index1=index2;
 						min=j;
 					}
 				}
