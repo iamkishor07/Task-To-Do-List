@@ -68,6 +68,18 @@ public class Task{
 
 		try {
 			List<String> lines = Files.readAllLines(path);
+			for(int i=0;i<lines.size();i++){
+				int index1=getIdexoFString(lines.get(i));
+				int min=i;
+				for(int j=i+1;j<lines.size();j++){
+					int index2=getIdexoFString(lines.get(j));
+					if(index1>=index2){
+                        index1=index2;
+						min=j;
+					}
+				}
+				Collections.swap(lines, i, min);
+			}
 
 			if (position >= 0 && position < lines.size()) {
 
